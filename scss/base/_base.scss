@@ -1,0 +1,23 @@
+
+//=============
+//Base Styles
+//=============
+* {
+border: 1px solid red;   
+
+}
+p {
+   @include text(1em, 1.5, $color: $grey);
+}
+
+.blockquote {
+    @include text(1.30em, 1.3, $color: $grey);
+    font-style: italic;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-left: 15px solid $green-pastel;
+    border-radius: 5px;
+
+}
+
+

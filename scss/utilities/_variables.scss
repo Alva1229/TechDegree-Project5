@@ -1,0 +1,103 @@
+
+// Descriptive color variables
+
+$white : #fff;
+$black : #000;
+$grey : #878787;
+$sky-blue : #28d5fc;
+$green-reg : #25b359;
+$red-reg : #cf4848;
+$orange-reg : #f87642;
+$purple-reg : #7f5899;
+$green-pastel  : #40d8af;
+
+// Functional color variables
+
+$color-prim : $green-pastel ;
+$color-sec : $green-reg;
+
+$color-text-light : $white;
+$color-text-base : $grey;
+$color-text-dark : $green-reg;
+
+$color-border-light : lighten($grey, 35%);
+$color-border-dark  : $green-pastel ;
+
+$color-link-default : $sky-blue ;
+$color-link-visited : $sky-blue;
+
+$color-shadow       : rgba($black,.8);
+$color-body         : $white;
+
+// UI Colors
+
+$ui-colors: (
+	default : $sky-blue,
+);
+
+//Font Stacks
+$stack-sans-serif : Helvetica, Arial, sans-serif;
+$stack-helvetica : 'Helvetica Neue', $stack-sans-serif;
+$stack-abolition : 'Abolition Regular', $stack-sans-serif;
+
+// Text
+
+$base__font-size : 16px;
+$base__line      : 24px;
+$letter-space    : 1px;
+
+// Font Weights
+
+$font-weight--thin       : 100;
+$font-weight--light      : 300;
+$font-weight--medium     : 400;
+$font-weight--bold       : 700;
+$font-weight--ultra-bold : 900;
+
+
+// Border radius
+
+$br: .4em;
+
+// Color Palette Modifiers
+
+$palettes: (
+  grey: (
+    xx-light : lighten($grey, 43%),
+    x-light  : lighten($grey, 35%),
+    light    : lighten($grey, 12%),
+    base     : $grey,
+    dark     : darken($grey, 8%),
+    x-dark   : darken($grey, 16%)
+  ),
+	black: (
+		light    : lighten($black, 10%),
+		base     : $black,
+		dark     : darken($black, 10%)
+	)
+);
+
+// Transitions
+
+$trns-duration   : .3s;
+
+//Asset path
+
+$path-img : '../images';
+
+$path-font : '../fonts';
+
+// Grid
+
+$g-col-width    : 65px;
+$g-gutter-width : 20px;
+$g-col-count    : 12;
+$g-cont-max-w   : 1050px;
+
+// Media Query breakpoints
+$brkpoint-sm :1px;
+$brkpoint-md : 768px;
+$brkpoint-lg : 1100px;
+
+$brk-narrow : '(max-width: 768px)';
+$brk-wide : '(max-width: 1024px)';

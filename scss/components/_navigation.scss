@@ -1,0 +1,22 @@
+
+.nav__item {
+    background-color: $white;
+    display:block;
+    margin-right: 25px;
+    margin-left: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}  
+.nav__item a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    color: $grey;    
+    display:block;
+    text-decoration: none;
+}
+.nav__item a:hover {
+    background-color: $green-pastel;
+    color: $white;
+}

@@ -1,0 +1,71 @@
+@mixin img-replace($img, $w, $h, $disp: block) {
+	background-image: url('#{$path-img}/#{$img}');
+	background-repeat: no-repeat;
+	width: $w;
+	height: $h;
+	display: $disp;
+}
+
+@mixin text ($size, $l-height: null, $weight: null, $color: null) {
+    font-size: $size;
+    line-height: $l-height;
+    font-weight: $weight;
+    color: $color;
+}
+
+// BEM Selectors
+
+@mixin e($element) {
+	&__#{$element} {
+		@content;
+	}
+}
+@mixin m($modifier) {
+	&--#{$modifier} {
+		@content;
+	}
+}
+
+//Media queries
+
+@mixin mq($break) {
+	@if $break == "small"{
+		@media (min-width: $brkpoint-sm) and (max-width: $brkpoint-md) {
+			@content;
+		}
+	}	
+	@else if $break == "medium" {
+		@media (min-width: $brkpoint-md + 1) {
+			@content;
+		}
+	}
+	@else if $break == "large" {
+		@media (min-width: $brkpoint-lg) {
+			@content;
+		}
+	}
+	@else {
+		@error "Whoops! No value could be retrieved for '#{$break}'.";
+	}
+}
+
+@mixin g-columns {
+	@for $i from 1 through $g-col-count {
+		$context: g-context($g-col-width, $g-col-count ,$g-gutter-width) !global;  
+		$target: ($g-col-width * $i) + ($g-gutter-width * ($i - 1));
+		
+		// Generate column modifier classes
+		&--#{$i} {
+		  width: percentage($target / $context);
+		}
+	  }
+}
+
+// Adjacent sibling margins
+
+@mixin doubly($margin: 1em) {
+	& + & {
+	  margin-left: $margin;
+    @content;
+	}
+}

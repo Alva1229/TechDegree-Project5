@@ -1,0 +1,30 @@
+.container {
+    margin: 0 auto;
+}
+.card p {
+   margin-left: 30px;
+   margin-right: 30px;
+   padding-right: 5px;
+   font-size: 14.5px; 
+}
+.card a {
+  color: $sky-blue; 
+ }
+.headline--primary {
+    @include text(1.7em, null, bold, $color: $green-pastel);
+    margin-left: 40px;
+    margin-right: 40px;
+}
+.headline--primary {
+    @include text(1.7em, null, bold, $color: $green-pastel);
+    margin-left: 45px;
+    margin-right: 45px;
+    margin-bottom: 50px;
+}
+.headline--secondary {
+    @include text(1em, null, normal, $color: $grey);
+    margin-top: 90px;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 50px;
+}

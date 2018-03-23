@@ -1,0 +1,16 @@
+[class^="img"] {
+	 display: block;
+	 margin-left: auto;
+	 margin-right: auto; 
+}
+
+.img--frame {
+	width: 80%;
+	padding:10px;
+	border: 1px solid $grey;
+}
+
+.img--avatar {
+	margin-top: 30px;
+}
+	
