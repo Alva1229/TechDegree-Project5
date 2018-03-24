@@ -2,10 +2,7 @@
 //=============
 //Base Styles
 //=============
-* {
-border: 1px solid red;   
 
-}
 p {
    @include text(1em, 1.5, $color: $grey);
 }

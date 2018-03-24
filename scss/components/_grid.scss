@@ -1,3 +1,98 @@
+// min-width 768
+
+@include mq(medium) {
+  .grid__row {
+    text-align: center;
+  }
+  .nav__item {
+    display: inline-block;
+    width: 15%;
+  }
+}
+
+// min-width 1400
+
+@include mq(large) {
+  .grid__row {
+    @include flexbox;
+    width: 85%;
+    margin: 0 auto;
+    align-content: space-between;
+    text-align: left;
+  }
+
+
+[class*="grid__col--"] {
+  @include flex(auto);
+  width: 80%;
+  margin: 25px 5px;
+  padding: 0;
+  text-align: center;
+}
+
+.grid__col--3 {
+  justify-content: space-between;
+  width: 10%;
+  align-self: center;
+}
+
+.grid__col--9 {
+  text-align: left;
+  width: 30%;
+}
+
+.nav__item {
+  padding: 7px 0;;
+  margin-top: 10%;
+}
+
+p {
+  width: 90%;
+  text-align: left;
+}
+
+.grid__col--6 {
+  align-self: center;
+}
+
+.grid__col--8 {
+  flex: 4 0.3 auto;
+  text-align: left;
+}
+
+.blockquote {
+  padding-left: 50px;
+}
+
+.grid__col--12 {
+  @include flexbox;
+  @include flex-direction(row);
+  justify-content: space-around;
+  margin: 0 auto;
+  > [class*="btn"] {
+    width: 15%;
+    align-self: center;
+    margin: 45px auto 0;
+  }
+}
+
+.grid__col--7 {
+  flex: 4 0.6 auto;
+}
+
+.grid__row {
+  &:last-of-type {
+    width: 50%;
+  }
+  & .centered {
+  margin-bottom: 100px;
+  }
+}
+}
+
+
+
+
 .grid__row {
    color: $grey;
    margin-bottom: 15px;
@@ -25,3 +120,6 @@ $three: 3, $color__col-3;
       background-color: $color; 
     }
   }
+
+//Media Queries
+

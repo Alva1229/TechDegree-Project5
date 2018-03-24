@@ -7,13 +7,14 @@
 }
 
 %btn {                       // button styling
-  @include font-size(16px);
+  @include font-size(14px);
   text-transform: uppercase;
   color: $white; 
-  width: 85%;
+  width: 100%;
   display: block;
   margin: 25px auto 0;
-  height: 45px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   border-radius: 5px;
   box-shadow: none;
   border: none;

@@ -20,6 +20,7 @@ $color-sec : $green-reg;
 $color-text-light : $white;
 $color-text-base : $grey;
 $color-text-dark : $green-reg;
+$color-text-strong : darken($grey, 25);
 
 $color-border-light : lighten($grey, 35%);
 $color-border-dark  : $green-pastel ;
@@ -84,9 +85,11 @@ $g-col-count    : 12;
 $g-cont-max-w   : 1050px;
 
 // Media Query breakpoints
-$brkpoint-sm :1px;
-$brkpoint-md : 768px;
-$brkpoint-lg : 1100px;
+$breakpoints: (
+	small: 480px,
+	medium: 768px,
+	large: 1400px,
+);
 
 $brk-narrow : '(max-width: 768px)';
 $brk-wide : '(max-width: 1024px)';
