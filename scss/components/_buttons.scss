@@ -1,61 +1,25 @@
-.btn, .theme_colors {
-    &--default {
-        width: 100%;
-        display: block;
-        margin-bottom: 20px;
-        padding: em(15px,18px);
-        border-radius:  $br;
-        color: $white;
-        background-color: $sky-blue;
-    }
-    &--success {
-        width: 100%;
-        display: block;
-        margin-bottom: 20px;
-        padding: em(15px,18px);
-        border-radius:  $br;
-        color: $white;
-        background-color: $green-reg;
-    }
-    &--error {
-        width: 100%;
-        display: block;
-        margin-bottom: 20px;
-        padding: em(15px,18px);
-        border-radius:  $br;
-        color: $white;
-        background-color: $red-reg;
-    }
-    &--warning {
-        width: 100%;
-        display: block;
-        margin-bottom: 20px;
-        padding: em(15px,18px);
-        border-radius:  $br;
-        color: $white;
-        background-color: $orange-reg;
-    }
-    &--info {
-        width: 100%;
-        padding: em(15px,18px);
-        border-radius:  $br;
-        display: block;
-        color: $white;
-        background-color: $purple-reg;
-    }
 
-}
-
-[class^="btn--"] {
-    @extend %center-align;
+[class^="btn"] {
     @extend %btn;
-    margin-bottom: em(20px, 14px); 
-    @media (min-width: 1px) and (max-width: 768px) {
-        width: 100%;
+  }
+  
+  // List of colors
+  
+  $def: default, $sky-blue;
+  $succ: success, $green-reg;
+  $error: error, $red-reg ;
+  $warn: warning, $orange-reg ;
+  $info: info, $purple-reg ;
+  
+  @each $type, $back in $def,$succ,$error,$warn,$info {
+    .btn--#{$type} {
+      background-color: $back;
     }
-    @media (min-width: 769px) { 
-      width: auto;
-      display: inline-block;
-      @include doubly(20px);
-    }
+  }
+  
+  
+  // headline space
+  
+  [class^="btn"]:first-child {
+    margin-top: 70px;
   }

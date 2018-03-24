@@ -12,60 +12,94 @@
     font-weight: $weight;
     color: $color;
 }
-
-// BEM Selectors
-
-@mixin e($element) {
-	&__#{$element} {
-		@content;
+// Box sizing
+@mixin box-sizing($type) {
+	-webkit-box-sizing: $type;
+	-moz-box-sizing: $type;
+	box-sizing: $type;
+  }
+  
+  
+  // Font size
+  @mixin font-size($size) {
+	font-size: $size;
+	font-size: ($size / 16px) * 1em;
+  }
+  
+  
+  // Flexbox / Settings
+  @mixin flexbox {
+	  display: -ms-flexbox; // ie
+	  display: -webkit-flex; 
+	  display: flex; 
 	}
-}
-@mixin m($modifier) {
-	&--#{$modifier} {
-		@content;
-	}
-}
-
-//Media queries
-
-@mixin mq($break) {
-	@if $break == "small"{
-		@media (min-width: $brkpoint-sm) and (max-width: $brkpoint-md) {
-			@content;
-		}
-	}	
-	@else if $break == "medium" {
-		@media (min-width: $brkpoint-md + 1) {
-			@content;
-		}
-	}
-	@else if $break == "large" {
-		@media (min-width: $brkpoint-lg) {
-			@content;
-		}
+  
+  @mixin flex($values) {
+	-webkit-box-flex: $values;
+	-moz-box-flex: $values;
+	-ms-flex: $values;
+	-webkit-flex: $values;
+	flex: $values;
+  }
+  
+  @mixin flex-order($order) {
+	-ms-flex-order: $order; // ie
+	-webkit-order: $order;
+	order: $order;
+  }
+  
+  @mixin flex-direction($direction) {
+	@if $direction == column {
+	  -webkit-flex-direction:vertical;
+	  -moz-flex-direction:vertical;
+	  -ms-flex-direction:column;
+	  -webkit-flex-direction:column;
+	  flex-direction:column;
 	}
 	@else {
-		@error "Whoops! No value could be retrieved for '#{$break}'.";
+	   -webkit-flex-direction:horizontal;
+	   -moz-flex-direction:horizontal;
+	   -ms-flex-direction:row;
+	   -webkit-flex-direction:row;
+	   flex-direction:row;
 	}
-}
-
-@mixin g-columns {
-	@for $i from 1 through $g-col-count {
-		$context: g-context($g-col-width, $g-col-count ,$g-gutter-width) !global;  
-		$target: ($g-col-width * $i) + ($g-gutter-width * ($i - 1));
-		
-		// Generate column modifier classes
-		&--#{$i} {
-		  width: percentage($target / $context);
-		}
-	  }
-}
-
-// Adjacent sibling margins
-
-@mixin doubly($margin: 1em) {
-	& + & {
-	  margin-left: $margin;
-    @content;
+  }
+  
+  
+  // Media queries
+  @mixin mq($mq-breakpoint, $mq-breakpoints: $breakpoints) {
+	// If $mq-breakpoint is a key that exists in 
+	// $mq-breakpoints, get and use the value
+	@if map-has-key($mq-breakpoints, $mq-breakpoint) {
+	  $mq-breakpoint: map-get($mq-breakpoints, $mq-breakpoint);
 	}
-}
+  
+	@media screen and (min-width: #{$mq-breakpoint}) {
+	  @content;
+	}
+  }
+  
+  
+  // BEM selectors
+  @mixin element($element) {
+	&__#{$element} {
+	  @content;
+	}
+  }
+  @mixin e($element) {
+	@include element($element) {
+	  @content;
+	}
+  }
+  
+  
+  @mixin modifier($modifier) {
+	&--#{$modifier} {
+	  @content;
+	}
+  }
+  @mixin m($modifier) {
+	@include modifier($modifier) {
+	  @content;
+	}
+  }

@@ -10,6 +10,7 @@ $red-reg : #cf4848;
 $orange-reg : #f87642;
 $purple-reg : #7f5899;
 $green-pastel  : #40d8af;
+$teal-reg: #4deed3;
 
 // Functional color variables
 
@@ -37,8 +38,6 @@ $ui-colors: (
 
 //Font Stacks
 $stack-sans-serif : Helvetica, Arial, sans-serif;
-$stack-helvetica : 'Helvetica Neue', $stack-sans-serif;
-$stack-abolition : 'Abolition Regular', $stack-sans-serif;
 
 // Text
 
@@ -59,23 +58,13 @@ $font-weight--ultra-bold : 900;
 
 $br: .4em;
 
-// Color Palette Modifiers
-
-$palettes: (
-  grey: (
-    xx-light : lighten($grey, 43%),
-    x-light  : lighten($grey, 35%),
-    light    : lighten($grey, 12%),
-    base     : $grey,
-    dark     : darken($grey, 8%),
-    x-dark   : darken($grey, 16%)
-  ),
-	black: (
-		light    : lighten($black, 10%),
-		base     : $black,
-		dark     : darken($black, 10%)
-	)
-);
+$color__col-12       : lighten($teal-reg, 15);
+$color__col-8        : lighten($orange-reg, 15);
+$color__col-7        : lighten($red-reg, 15);
+$color__col-6        : darken($sky-blue, 25);
+$color__col-5        : lighten($green-reg, 15);
+$color__col-4        : lighten($sky-blue, 15);
+$color__col-3        : lighten($purple-reg, 15);
 
 // Transitions
 

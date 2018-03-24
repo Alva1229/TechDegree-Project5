@@ -1,0 +1,27 @@
+.grid__row {
+   color: $grey;
+   margin-bottom: 15px;
+   font-family: $stack-sans-serif;
+   width: 90%;
+   margin: 0 auto 30px;
+}
+
+$twelve: 12, $color__col-12; 
+$eight: 8, $color__col-8;
+$seven: 7, $color__col-7;
+$six: 6, $color__col-6;
+$five: 5, $color__col-5;
+$four: 4, $color__col-4;
+$three: 3, $color__col-3;
+
+
+@each $grid, $color in $twelve,$eight,$seven,$six,$five,$four,$three {
+    .grid__col--#{$grid}.theme__colors {
+      @include font-size(15px);
+      @extend %extra-room;
+      font-weight: $font-weight--medium;
+      text-indent: 8px;
+      border-radius: 6px;
+      background-color: $color; 
+    }
+  }

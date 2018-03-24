@@ -6,23 +6,18 @@
   }
 }
 
-%btn {
-    padding: 15px 30px;
-    border: 0;
-    border-radius : $br;
-    color: $white;
-    text-transform: uppercase;
-    font-size : em(14px);
-    font-weight: $font-weight--medium;
-    transition: opacity $trns-duration;
-    display: block;
-    &:hover {
-      opacity: .75;
-    }
-    &:active {
-      opacity: initial;
-    }
-  }
+%btn {                       // button styling
+  @include font-size(16px);
+  text-transform: uppercase;
+  color: $white; 
+  width: 85%;
+  display: block;
+  margin: 25px auto 0;
+  height: 45px;
+  border-radius: 5px;
+  box-shadow: none;
+  border: none;
+}
 
   // Center alignment
 
@@ -30,3 +25,40 @@
 	text-align: center;
 }
 
+
+%link { 
+  text-decoration: none;
+}
+
+%nav__item {               
+  @include font-size(18px);
+  border-radius: 6px;
+  padding: 15px 0;
+  margin: 0 auto;
+  width: 80%;
+  margin-bottom: 2px;
+  text-decoration: none;
+  list-style-type: none;
+  letter-spacing: 0.6px;
+}
+
+%image {
+  margin: 0 auto;
+  display: block;
+}
+
+%headlines {
+  width: 80%;
+  margin: 0 auto;
+  font-family: $stack-sans-serif;
+}
+
+%font {                       
+  font-family: $stack-sans-serif;
+}
+
+
+%extra-room {         
+  padding: 9px 0;
+  margin-bottom: 6px;
+}
