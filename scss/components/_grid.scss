@@ -90,9 +90,6 @@ p {
 }
 }
 
-
-
-
 .grid__row {
    color: $grey;
    margin-bottom: 15px;
@@ -118,6 +115,9 @@ $three: 3, $color__col-3;
       text-indent: 8px;
       border-radius: 6px;
       background-color: $color; 
+      color: $color-text-strong;
+      padding-top: 15px;
+      padding-bottom: 15px;
     }
   }
 
