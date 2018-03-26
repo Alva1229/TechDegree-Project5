@@ -4,7 +4,7 @@
   display:block;
   padding-top: 5px;
   padding-bottom: 5px;
-  text-align: center;
+ 
   @include font-size(18px);
 }  
 .nav__item a {
@@ -13,6 +13,7 @@
   border-radius: 5px;
   color: $grey;    
   display:block;
+  text-align: center;
   text-decoration: none;
 }
 .nav__item a:hover {

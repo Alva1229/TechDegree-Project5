@@ -1,13 +1,56 @@
+@include mq(small) {
+  .nav {
+    text-align: center;
+  }
+  .img--logo {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 100px;
+  }
+
+  .headline--secondary {
+    text-align: left;
+    width: 90%;
+}
+.card p {
+  font-size: 18px; 
+  padding-right: 30px;
+}
+  .blockquote {
+    @include text(1.5em, 1.2, $color: $grey);
+    font-style: italic;
+    padding-left: 20px;
+    padding-right: 80px;
+    border-left: 10px solid $green-pastel;
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-left: 18px;
+    font-weight: $font-weight--light; 
+
+}
+
+}
 // min-width 768
 
 @include mq(medium) {
-  .grid__row {
+  .nav {
     text-align: center;
   }
-  .nav__item {
+  .img--logo {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 100px;
+  }
+   .nav__item {
     display: inline-block;
     width: 15%;
   }
+ 
+  #type {
+    text-align: left;
+    width: 95%;
+  }
+
 }
 
 // min-width 1400
@@ -20,7 +63,14 @@
     align-content: space-between;
     text-align: left;
   }
-
+  .nav {
+    text-align: left;
+  }
+  .img--logo {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: -300px;
+  }
 
 [class*="grid__col--"] {
   @include flex(auto);
@@ -50,6 +100,10 @@ p {
   width: 90%;
   text-align: left;
 }
+.card p {
+  font-size: 18px; 
+  width: 87%;
+}
 
 .grid__col--6 {
   align-self: center;
@@ -61,7 +115,8 @@ p {
 }
 
 .blockquote {
-  padding-left: 50px;
+  padding-left: 40px;
+  padding-right: 155px;
 }
 
 .grid__col--12 {
@@ -120,6 +175,4 @@ $three: 3, $color__col-3;
       padding-bottom: 15px;
     }
   }
-
-//Media Queries
 
